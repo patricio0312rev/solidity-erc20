@@ -33,7 +33,7 @@ interface IERC20 {
 // Implementacion de las funciones del token ERC20
 contract ERC20Basic is IERC20 {
     string public constant name = "ERC20BlockchainAZ";
-    string public constant symbol "PJT"; // PJ Token
+    string public constant symbol = "PJT"; // PJ Token
     uint8 public constant decimal = 18;
 
     event Transfer(address indexed from, address indexed to, uint256 tokens);
@@ -43,26 +43,28 @@ contract ERC20Basic is IERC20 {
 
     mapping (address => uint) balances;
     mapping (address => mapping(address => uint)) allowed;
-
     uint256 totalSupply_;
 
     constructor(uint256 initialSupply) public {
         totalSupply_ = initialSupply;
-        balances[msg.sender] = totalSupply;
+        balances[msg.sender] = totalSupply_;
+    }
+
+    function increaseTotalSupply(uint newTokensAmount) public {
+        totalSupply_ += newTokensAmount;
+        balances[msg.sender] += newTokensAmount;
     }
 
     function totalSupply() public override view returns(uint256) {
-        return 0;
+        return totalSupply_;
     }
 
-    function balanceOf(address account) public override view returns(uint256) {
-
-        return 0;
+    function balanceOf(address tokenOwner) public override view returns(uint256) {
+        return balances[tokenOwner];
     }
 
-    function allowance(address owner, address spender) public override view returns(uint256) {
-
-        return 0;
+    function allowance(address owner, address delegate) public override view returns(uint256) {
+        return allowed[owner][delegate];
     }
 
     function transfer(address recipient, uint256 amount) public override returns(bool) {

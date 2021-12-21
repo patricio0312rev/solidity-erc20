@@ -6,6 +6,17 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "initialSupply",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -64,7 +75,7 @@
 					},
 					{
 						"internalType": "address",
-						"name": "spender",
+						"name": "delegate",
 						"type": "address"
 					}
 				],
@@ -107,7 +118,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "account",
+						"name": "tokenOwner",
 						"type": "address"
 					}
 				],
@@ -124,7 +135,46 @@
 			},
 			{
 				"inputs": [],
+				"name": "decimal",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newTokensAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "increaseTotalSupply",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -230,11 +280,11 @@
 	},
 	"sources": {
 		"custom_token/ERC20.sol": {
-			"keccak256": "0xf6a1abe5a6f0a27a90f01d40cd29fcfc9665c683f55a40a5f1c7f89257922f5a",
+			"keccak256": "0x740cdaa683e03ba087ca7e7720ff4fce8de38970005aa305e11f225e26ff3ecb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c5ca83d7b86a8af3bd7f985879489eecd071a65b1f11116b42f68c635617f6ac",
-				"dweb:/ipfs/QmWSND6A42AExFRWVXDFm1CHGo1jc6STdbfuY4tKJmZpPF"
+				"bzz-raw://f02baffd5233fdc9f3a44bc45604a405514a0aca25146302f323a33476c7a528",
+				"dweb:/ipfs/Qmf1GdJSD79yNY8DHfGdd8FbQ9eXJa8GEXFc28joLUeGJK"
 			]
 		},
 		"custom_token/SafeMath.sol": {
