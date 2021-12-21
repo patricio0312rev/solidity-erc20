@@ -34,6 +34,8 @@ contract ERC20Basic is IERC20 {
     event Transfer(address indexed from, address indexed to, uint256 tokens);
     event Approval(address indexed owner, address indexed spender, uint256 tokens);
 
+    using SafeMath for uint256;
+
     function totalSupply() public override view returns(uint256) {
         return 0;
     }
