@@ -33,6 +33,30 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "account",
 						"type": "address"
 					}
@@ -59,6 +83,59 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -90,11 +167,11 @@
 	},
 	"sources": {
 		"custom_token/ERC20.sol": {
-			"keccak256": "0x19052ccb01ab92bbab73a939abab6c9a4e158ff507a040a0c9394ca7fdc2b12a",
+			"keccak256": "0x1ada43c6bb4e60e92ae2ab7ea304ff43be95ba530186190640cd43e59caede06",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4b7c26bcb9b448d2739b51852d12e2169a5dabe0c779ef0142cdb2bcb9265890",
-				"dweb:/ipfs/QmRNVhfLhyjhqNgom4abtm6Qpo8khMU3B2AX4dQw1tpDHq"
+				"bzz-raw://2bdfbe78ee1f5a499e9abbacd0de26d1cf1c9ca32a2dc4d5a85805fd0411df4e",
+				"dweb:/ipfs/QmYAWzsEXMNTYbHSuKD29PqgWmH9VpdfHd9UrJ2VNJtnPR"
 			]
 		},
 		"custom_token/SafeMath.sol": {
