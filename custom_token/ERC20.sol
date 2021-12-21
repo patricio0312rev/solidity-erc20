@@ -67,8 +67,13 @@ contract ERC20Basic is IERC20 {
         return allowed[owner][delegate];
     }
 
-    function transfer(address recipient, uint256 amount) public override returns(bool) {
-        return false;
+    function transfer(address recipient, uint256 numTokens) public override returns(bool) {
+        require(numTokens <= balances[msg.sender]);
+        balances[msg.sender] = balances[msg.sender].sub(numTokens);
+        balances[recipient] = balances[recipient].add(numTokens);
+
+        emit Transfer(msg.sender, recipient, numTokens);
+        return true;
     }
 
     function approve(address spender, uint256 amount) public override returns(bool) {

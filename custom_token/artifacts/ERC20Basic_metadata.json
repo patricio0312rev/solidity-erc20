@@ -207,7 +207,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "numTokens",
 						"type": "uint256"
 					}
 				],
@@ -280,11 +280,11 @@
 	},
 	"sources": {
 		"custom_token/ERC20.sol": {
-			"keccak256": "0x740cdaa683e03ba087ca7e7720ff4fce8de38970005aa305e11f225e26ff3ecb",
+			"keccak256": "0xc1a30b5cde54a056672823721d4617186a660cfd3845b0bd7ff3e9c44e3df10f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f02baffd5233fdc9f3a44bc45604a405514a0aca25146302f323a33476c7a528",
-				"dweb:/ipfs/Qmf1GdJSD79yNY8DHfGdd8FbQ9eXJa8GEXFc28joLUeGJK"
+				"bzz-raw://6818e189e25618435b3f22c18a13647b8f044dc1430838ecac07c666ca525d1e",
+				"dweb:/ipfs/QmYcn1ajq3tpwF26QEcmn7kjHhKRTyMEcFvEqBaGcS39gL"
 			]
 		},
 		"custom_token/SafeMath.sol": {
