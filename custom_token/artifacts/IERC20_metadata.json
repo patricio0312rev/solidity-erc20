@@ -6,6 +6,56 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -167,11 +217,11 @@
 	},
 	"sources": {
 		"custom_token/ERC20.sol": {
-			"keccak256": "0x1ada43c6bb4e60e92ae2ab7ea304ff43be95ba530186190640cd43e59caede06",
+			"keccak256": "0x4eab75ff723ce0d0364e7c73f6547b84c81ce78bbe271b22dd0edde423ef1007",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2bdfbe78ee1f5a499e9abbacd0de26d1cf1c9ca32a2dc4d5a85805fd0411df4e",
-				"dweb:/ipfs/QmYAWzsEXMNTYbHSuKD29PqgWmH9VpdfHd9UrJ2VNJtnPR"
+				"bzz-raw://44e5a5d2ba698808a5293cd16d5642b7c866d95b9a30965f0e2e08275c57f522",
+				"dweb:/ipfs/Qme1KCGB4SHfdnYKiMAVfdsnXKsg4bHkXUxfFHamQUtTFU"
 			]
 		},
 		"custom_token/SafeMath.sol": {

@@ -22,9 +22,18 @@ interface IERC20 {
 
     // Devuelve un valor booleano con el resultado de la operación de paso de una cantidad de tokens usando el método allowance()
     function transferFrom(address sender, address recipient, uint256 amount) external returns(bool);
+
+    // Evento que se debe emitir cuando una cantidad de tokens pase de un origen a un destino
+    event Transfer(address indexed from, address indexed to, uint256 amount);
+
+    // Evento que se debe emitir cuando se establece una asignacion con el método allowance()
+    event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
 contract ERC20Basic is IERC20 {
+    event Transfer(address indexed from, address indexed to, uint256 tokens);
+    event Approval(address indexed owner, address indexed spender, uint256 tokens);
+
     function totalSupply() public override view returns(uint256) {
         return 0;
     }
