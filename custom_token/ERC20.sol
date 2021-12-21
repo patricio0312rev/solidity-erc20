@@ -38,7 +38,7 @@ interface IERC20 {
 contract ERC20Basic is IERC20 {
     string public constant name = "ERC20BlockchainAZ";
     string public constant symbol = "PJT"; // PJ Token
-    uint8 public constant decimal = 18;
+    uint8 public constant decimal = 2;
 
     event Transfer(address indexed from, address indexed to, uint256 tokens);
     event Approval(address indexed owner, address indexed spender, uint256 tokens);
