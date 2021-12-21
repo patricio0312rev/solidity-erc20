@@ -30,11 +30,26 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
+// Implementacion de las funciones del token ERC20
 contract ERC20Basic is IERC20 {
+    string public constant name = "ERC20BlockchainAZ";
+    string public constant symbol "PJT"; // PJ Token
+    uint8 public constant decimal = 18;
+
     event Transfer(address indexed from, address indexed to, uint256 tokens);
     event Approval(address indexed owner, address indexed spender, uint256 tokens);
 
     using SafeMath for uint256;
+
+    mapping (address => uint) balances;
+    mapping (address => mapping(address => uint)) allowed;
+
+    uint256 totalSupply_;
+
+    constructor(uint256 initialSupply) public {
+        totalSupply_ = initialSupply;
+        balances[msg.sender] = totalSupply;
+    }
 
     function totalSupply() public override view returns(uint256) {
         return 0;
